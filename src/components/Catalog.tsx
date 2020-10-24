@@ -7,21 +7,16 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-// const useStyles = makeStyles({
-//   root: {
-//     padding: '1rem',
-//   },
-//   card: {
-//     maxWidth: 345,
-//   },
-//   media: {
-//     height: 140,
-//   },
-// });
-const useStyles = () => ({
-  root: "",
-  card: "",
-  media: "",
+const useStyles = makeStyles({
+  root: {
+    padding: "1rem",
+  },
+  card: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
 });
 
 function Catalog() {
