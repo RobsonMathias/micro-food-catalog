@@ -146,9 +146,9 @@ const webpackConfig = (appName, overridesConfig = () => {}) => {
       },
       optimization: {
         namedModules: isDevServer,
-        splitChunks: {
-          chunks: "all",
-        },
+        // splitChunks: {
+        //   chunks: 'all',
+        // },
       },
       plugins: [
         new CleanWebpackPlugin(),
