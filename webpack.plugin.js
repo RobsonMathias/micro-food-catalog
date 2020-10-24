@@ -29,7 +29,7 @@ const webpackConfig = (appName, overridesConfig = () => {}) => {
   return (env = {}) => {
     const isProduction = env.environment === "production";
     const dotEnvFile = getFile(".env", env.environment);
-    const dotServerConfig = getFile("netlify.toml", env.environment);
+    const dotRedirectsConfig = getFile("_redirects", env.environment);
 
     const result = {
       mode:
@@ -188,10 +188,10 @@ const webpackConfig = (appName, overridesConfig = () => {}) => {
         new CopyWebpackPlugin({
           patterns: [
             {
-              from: path.resolve(process.cwd(), dotServerConfig),
+              from: path.resolve(process.cwd(), dotRedirectsConfig),
               to: path.resolve(
                 process.cwd(),
-                `./build/${getFile("netlify.toml")}`
+                `./build/${getFile("_redirects")}`
               ),
               toType: "file",
             },
