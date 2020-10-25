@@ -9,8 +9,8 @@ import { create } from "jss";
 const jss = create(jssPreset());
 
 const generateClassName = createGenerateClassName({
-  productionPrefix: "host",
-  seed: "host",
+  productionPrefix: "catalog",
+  seed: "catalog",
 });
 
 function StyleProvider({ children }: any) {
